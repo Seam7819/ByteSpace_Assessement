@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, GraduationCap, Menu, X } from "lucide-react";
+import { Link } from "react-router";
 import { Brand } from "./Brand";
 
 export function SiteHeader() {
@@ -32,10 +33,10 @@ export function SiteHeader() {
           </a>
         </nav>
         <div className="header-actions">
-          <a href="#signin">Sign in</a>
-          <a href="#join">
+          <Link to="/login">Sign in</Link>
+          <Link to="/signup">
             Join us <ArrowRight size={14} />
-          </a>
+          </Link>
           <button className="bag-button" aria-label="Open your learning list">
             <GraduationCap size={17} />
           </button>

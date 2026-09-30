@@ -1,16 +1,19 @@
+import { Link } from "react-router";
+
 type BrandProps = {
   inverse?: boolean;
+  compact?: boolean;
 };
 
-export function Brand({ inverse = false }: BrandProps) {
+export function Brand({ inverse = false, compact = false }: BrandProps) {
   return (
-    <a
-      className={`brand${inverse ? " brand-inverse" : ""}`}
-      href="#home"
+    <Link
+      className={`brand${inverse ? " brand-inverse" : ""}${compact ? " brand-compact" : ""}`}
+      to="/"
       aria-label="ByteSpace home"
     >
       <span className="brand-mark">b</span>
-      <span>ByteSpace</span>
-    </a>
+      <span className={compact ? "visually-hidden" : undefined}>ByteSpace</span>
+    </Link>
   );
 }

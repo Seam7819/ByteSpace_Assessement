@@ -1,13 +1,22 @@
 import { BarChart3, Star } from "lucide-react";
+import { Link } from "react-router";
 import type { Course } from "../../features/home/types";
 import { getPhotoUrl } from "../../features/home/utils";
+
+function toSlug(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 export function CourseCard({ course }: { course: Course }) {
   return (
     <article className="course-card">
-      <a
+      <Link
         className="course-image"
-        href="#courses"
+        to={`/course/${toSlug(course.title)}`}
         aria-label={`Explore ${course.title}`}
       >
         <img src={getPhotoUrl(course.image, 720)} alt="" loading="lazy" />
@@ -17,11 +26,13 @@ export function CourseCard({ course }: { course: Course }) {
           <span>2 hours 16 mins</span>
           <span>{course.students} learners</span>
         </span>
-      </a>
+      </Link>
       <div className="course-main">
         <div className="course-title-row">
           <div>
-            <h3>{course.title}</h3>
+            <Link to={`/course/${toSlug(course.title)}`} className="course-title-link">
+              <h3>{course.title}</h3>
+            </Link>
             <a href="#creators" className="creator-link">
               by purepearl studio
             </a>

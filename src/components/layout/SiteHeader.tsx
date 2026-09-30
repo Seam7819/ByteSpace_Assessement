@@ -22,13 +22,13 @@ export function SiteHeader() {
           className={`main-nav${menuOpen ? " is-open" : ""}`}
           aria-label="Main navigation"
         >
-          <a href="#home" onClick={() => setMenuOpen(false)}>
+          <a href="/#home" onClick={() => setMenuOpen(false)}>
             Home
           </a>
-          <a href="#courses" onClick={() => setMenuOpen(false)}>
+          <a href="/#courses" onClick={() => setMenuOpen(false)}>
             Courses
           </a>
-          <a href="#creators" onClick={() => setMenuOpen(false)}>
+          <a href="/#creators" onClick={() => setMenuOpen(false)}>
             Creators
           </a>
         </nav>

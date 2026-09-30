@@ -33,9 +33,9 @@ export function CourseCard({ course }: { course: Course }) {
             <Link to={`/course/${toSlug(course.title)}`} className="course-title-link">
               <h3>{course.title}</h3>
             </Link>
-            <a href="#creators" className="creator-link">
+            <Link to="/creator/purepearl-studio" className="creator-link">
               by purepearl studio
-            </a>
+            </Link>
           </div>
           <span className="rating">
             4.9 <Star size={13} fill="currentColor" />

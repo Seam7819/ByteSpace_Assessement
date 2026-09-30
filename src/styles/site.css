@@ -531,6 +531,184 @@ img {
   gap: 9px;
   background: #fff;
 }
+.creator-profile-page {
+  background: #fff;
+}
+.creator-profile-hero {
+  padding: 28px 0 42px;
+  color: #fff;
+  background-color: var(--blue);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.creator-profile-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.creator-profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.creator-profile-avatar {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.creator-profile-identity {
+  min-width: 0;
+}
+.creator-profile-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.creator-profile-title-row h1 {
+  margin: 0;
+  font: 800 clamp(24px, 3vw, 34px)/1.15 var(--display);
+}
+.creator-role-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+.creator-profile-identity p {
+  margin: 7px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+.creator-profile-description {
+  max-width: 900px;
+  margin: 24px 0 26px;
+  color: rgba(255, 255, 255, 0.91);
+  font-size: 13px;
+  line-height: 1.75;
+}
+.creator-profile-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.creator-profile-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.creator-profile-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: #424b58;
+  font-size: 11px;
+}
+.creator-profile-stats strong {
+  color: var(--blue);
+  font-weight: 700;
+}
+.creator-follow-button {
+  min-width: 88px;
+  min-height: 36px;
+  padding: 0 16px;
+  border: 1px solid var(--lime);
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.creator-follow-button.is-following {
+  background: #fff;
+  color: var(--blue);
+}
+.creator-products-section {
+  padding: 34px 0 46px;
+}
+.creator-products-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.creator-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.creator-select-control,
+.creator-sort-control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #e5e7e5;
+  border-radius: 999px;
+  background: #fff;
+  color: #515a64;
+  font-size: 10px;
+  cursor: pointer;
+}
+.creator-select-control select,
+.creator-sort-control select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.creator-select-control:focus-within,
+.creator-sort-control:focus-within {
+  outline: 2px solid rgba(18, 56, 232, 0.35);
+  outline-offset: 2px;
+}
+.creator-sort-control {
+  min-width: 142px;
+  justify-content: center;
+}
+.creator-empty-state {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #e6e9e6;
+  color: #68717b;
+}
+.creator-empty-state p {
+  margin: 0;
+  font-size: 14px;
+}
+.creator-empty-state button {
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .course-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1973,6 +2151,75 @@ img {
   .sort-button {
     margin-top: 9px;
     height: 30px;
+    font-size: 9px;
+  }
+  .creator-profile-hero {
+    padding: 24px 0 30px;
+  }
+  .creator-profile-heading {
+    gap: 12px;
+  }
+  .creator-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 13px;
+  }
+  .creator-profile-title-row {
+    gap: 8px;
+  }
+  .creator-profile-title-row h1 {
+    font-size: 22px;
+  }
+  .creator-role-chip {
+    min-height: 23px;
+    padding-inline: 10px;
+    font-size: 9px;
+  }
+  .creator-profile-identity p {
+    font-size: 11px;
+  }
+  .creator-profile-description {
+    margin: 18px 0 20px;
+    font-size: 11px;
+  }
+  .creator-profile-stats {
+    gap: 7px;
+  }
+  .creator-profile-stats span {
+    min-height: 31px;
+    padding-inline: 11px;
+    font-size: 9px;
+  }
+  .creator-follow-button {
+    min-width: 76px;
+    min-height: 32px;
+    padding-inline: 12px;
+    font-size: 10px;
+  }
+  .creator-products-section {
+    padding: 24px 0 34px;
+  }
+  .creator-products-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+  .creator-filter-controls {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2px 2px 5px;
+    scrollbar-width: none;
+  }
+  .creator-filter-controls::-webkit-scrollbar {
+    display: none;
+  }
+  .creator-select-control {
+    flex: 0 0 auto;
+  }
+  .creator-sort-control {
+    align-self: flex-end;
+    min-height: 30px;
     font-size: 9px;
   }
   .course-grid {

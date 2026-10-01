@@ -1911,7 +1911,7 @@ img {
 }
 @media (max-width: 700px) {
   body {
-    min-width: 360px;
+    min-width: 320px;
   }
   .page-wrap,
   .header-inner,
@@ -2152,6 +2152,101 @@ img {
     margin-top: 9px;
     height: 30px;
     font-size: 9px;
+  }
+  .detail-hero {
+    padding: 24px 0 34px;
+  }
+  .detail-header-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .detail-header-copy {
+    min-width: 0;
+  }
+  .detail-header-copy h1 {
+    font-size: clamp(30px, 8.5vw, 40px);
+    letter-spacing: -1.5px;
+  }
+  .detail-header-copy p {
+    font-size: 12px;
+  }
+  .share-button {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+  .detail-submeta {
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+  .detail-author {
+    font-size: 11px;
+  }
+  .detail-chip {
+    min-height: 28px;
+    gap: 5px;
+    padding-inline: 9px;
+    font-size: 10px;
+  }
+  .detail-main-grid,
+  .detail-lower-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .detail-main-grid {
+    gap: 14px;
+  }
+  .detail-media-card {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+  }
+  .play-button {
+    width: 62px;
+    height: 62px;
+  }
+  .detail-info-card {
+    padding: 18px 16px 16px;
+    border-radius: 12px;
+  }
+  .detail-info-card h2 {
+    font-size: 16px;
+  }
+  .lesson-list li {
+    grid-template-columns: 22px minmax(0, 1fr) auto;
+    gap: 7px;
+    font-size: 11px;
+  }
+  .detail-lower-grid {
+    gap: 0;
+    margin-top: 16px;
+  }
+  .detail-content-panel {
+    min-width: 0;
+    padding: 16px 15px 20px;
+    border-radius: 12px;
+  }
+  .detail-tabs {
+    justify-content: space-around;
+    gap: 12px;
+  }
+  .tab {
+    font-size: 12px;
+  }
+  .review-summary {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .rating-badge {
+    width: 72px;
+    height: 72px;
+  }
+  .rating-row {
+    grid-template-columns: 48px minmax(0, 1fr) 22px;
+    gap: 6px;
+    font-size: 10px;
+  }
+  .rating-row strong {
+    font-size: 10px;
   }
   .creator-profile-hero {
     padding: 24px 0 30px;

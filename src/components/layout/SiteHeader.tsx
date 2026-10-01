@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, GraduationCap, Menu, X } from "lucide-react";
+import { ArrowRight, GraduationCap, Menu, Search, X } from "lucide-react";
 import { Link } from "react-router";
 import { Brand } from "./Brand";
 
@@ -22,15 +22,18 @@ export function SiteHeader() {
           className={`main-nav${menuOpen ? " is-open" : ""}`}
           aria-label="Main navigation"
         >
-          <a href="#home" onClick={() => setMenuOpen(false)}>
+          <a href="/#home" onClick={() => setMenuOpen(false)}>
             Home
           </a>
-          <a href="#courses" onClick={() => setMenuOpen(false)}>
+          <a href="/#courses" onClick={() => setMenuOpen(false)}>
             Courses
           </a>
-          <a href="#creators" onClick={() => setMenuOpen(false)}>
+          <a href="/#creators" onClick={() => setMenuOpen(false)}>
             Creators
           </a>
+          <Link className="nav-search-link" to="/search" onClick={() => setMenuOpen(false)}>
+            <Search size={14} /> Search
+          </Link>
         </nav>
         <div className="header-actions">
           <Link to="/login">Sign in</Link>

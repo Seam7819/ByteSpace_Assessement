@@ -1,5 +1,6 @@
 import { ArrowDownRight, ArrowRight, Search } from "lucide-react";
 import type { FormEvent } from "react";
+import { useNavigate } from "react-router";
 import { getPhotoUrl } from "../utils";
 
 type HeroSectionProps = {
@@ -8,9 +9,13 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
+  const navigate = useNavigate();
+
   function submitSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    document.querySelector("#courses")?.scrollIntoView({ behavior: "smooth" });
+    const search = new URLSearchParams();
+    if (query.trim()) search.set("q", query.trim());
+    navigate(`/search${search.size ? `?${search}` : ""}`);
   }
 
   return (

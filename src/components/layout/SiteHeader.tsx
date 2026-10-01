@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, GraduationCap, Menu, X } from "lucide-react";
+import { ArrowRight, GraduationCap, Menu, Search, X } from "lucide-react";
 import { Link } from "react-router";
 import { Brand } from "./Brand";
 
@@ -31,6 +31,9 @@ export function SiteHeader() {
           <a href="/#creators" onClick={() => setMenuOpen(false)}>
             Creators
           </a>
+          <Link className="nav-search-link" to="/search" onClick={() => setMenuOpen(false)}>
+            <Search size={14} /> Search
+          </Link>
         </nav>
         <div className="header-actions">
           <Link to="/login">Sign in</Link>
